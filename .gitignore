@@ -6,5 +6,5 @@ __pycache__/
 venv/
 output_reports/
 
-
+.DS_Store
 .vscode/
