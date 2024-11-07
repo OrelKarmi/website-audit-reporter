@@ -2,15 +2,6 @@ from pydantic import BaseModel, Field
 from typing import List
 
 class ResearchFindings(BaseModel):
-    """Model representing research findings for a specific question.
-    
-    Attributes:
-        question (str): The guiding question being answered
-        answer (str): The extracted answer from the research
-        evidence (List[str]): Supporting evidence or quotes
-        confidence (float): Confidence score (0-1)
-        follow_up_question (str): Follow-up question for low confidence findings
-    """
     question: str = Field(description="The guiding question")
     answer: str = Field(description="The extracted answer from the research")
     evidence: List[str] = Field(description="Supporting evidence or quotes from the research", default_factory=list)

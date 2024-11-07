@@ -38,13 +38,15 @@ if __name__ == "__main__":
 
 ### Main Graph
 
-The main graph provides an overview of the website's performance, highlighting key areas that need attention.
+The main graph divides the overall task into two parts:
+1. Identification of target audiences
+2. Investigation of the organization
 
 ![Main Graph](images/main_graph.png)
 
 ### Researcher Graph
 
-The researcher graph offers a more detailed analysis, focusing on specific elements and their impact.
+The Researcher Graph takes the task assigned by the Main Graph, breaks it down into smaller tasks, and generates a detailed report accordingly, as requested by the Main Graph.
 
 ![Researcher Graph](images/researcher_graph.png)
 

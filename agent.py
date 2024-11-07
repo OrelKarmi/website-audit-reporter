@@ -55,7 +55,8 @@ class Agent:
         return state
 
 
-    def create_research(self, state: MainGraphState) -> MainGraphState:
+    def main_research(self, state: MainGraphState) -> MainGraphState:
+        """create the main research task"""
         stakeholder_groups = state["stakeholders"]
 
         try:
@@ -155,7 +156,7 @@ class Agent:
         
         # Add nodes
         workflow.add_node("stakeholders_researcher", self.get_stakeholders)
-        workflow.add_node("main_researcher", self.create_research)
+        workflow.add_node("main_researcher", self.main_research)
         
         # Define edges
         workflow.add_edge(START, "stakeholders_researcher")

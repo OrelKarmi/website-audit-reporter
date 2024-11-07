@@ -16,7 +16,7 @@ class Research:
         self.retriver = retriver
 
     def planner(self, state: ResearchState) -> ResearchState:
-        """Split the main research task into focus areas"""
+        """Split the task research task into small chanks"""
         task = state["task"]
 
         # Add your logic here
@@ -55,6 +55,7 @@ class Research:
         return state
 
     def search_context(self, state: ResearchState) -> ResearchState:
+        """Search for relevant context based on the task and search queries"""
         state["context"] = []
         
         queries = state["search_queries"]
@@ -116,6 +117,7 @@ class Research:
         return state
 
     def analyze_finfind(self, state: ResearchState) -> ResearchState:
+        """Analyze research context and extract structured findings"""
         context = state["context"]
         guiding_questions = state["guiding_questions"]
 
@@ -175,7 +177,7 @@ class Research:
         return not within_iterations or  no_remaining_questions
 
     def summarize_findings(self, state: ResearchState) -> ResearchState:
-        """Summarize research findings and context"""
+        """Summarize research findings and evaluate the level of the findings"""
         system = """You are a research summarization expert. 
             Your task is to summarize the key findings of the research process and evaluate the level of the findings"""
 
