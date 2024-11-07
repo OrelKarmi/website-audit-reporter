@@ -154,12 +154,12 @@ class Agent:
         workflow = StateGraph(MainGraphState)
         
         # Add nodes
-        workflow.add_node("get_stakeholders", self.get_stakeholders)
-        workflow.add_node("create_research", self.create_research)
+        workflow.add_node("stakeholders_researcher", self.get_stakeholders)
+        workflow.add_node("main_researcher", self.create_research)
         
         # Define edges
-        workflow.add_edge(START, "get_stakeholders")
-        workflow.add_edge("get_stakeholders", "create_research")
-        workflow.add_edge("create_research", END)
+        workflow.add_edge(START, "stakeholders_researcher")
+        workflow.add_edge("stakeholders_researcher", "main_researcher")
+        workflow.add_edge("main_researcher", END)
 
         return workflow

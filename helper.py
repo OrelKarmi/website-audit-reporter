@@ -215,4 +215,13 @@ async def lazy_load(user_agent, urls):
         except aiohttp.ClientConnectionError:
             pass
 
-    return successful_docs # type: ignore
+    return successful_docs # type: 
+
+
+
+
+def save_graph_image(png_data, output_path):
+    with open(output_path, 'wb') as f:
+        f.write(png_data)
+        
+    print(f"Graph saved successfully to {output_path}")

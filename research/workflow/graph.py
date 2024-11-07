@@ -1,4 +1,5 @@
 from langgraph.graph import START, END, StateGraph
+from helper import save_graph_image
 from research.analyzer import Research
 from research.workflow.state import ResearchState, get_initial_state
 from retriver import Retriver
@@ -12,6 +13,7 @@ def run_research_workflow(retriver:Retriver, task:str, output_foramt:str, max_it
     
     # Print workflow graph
     print(workflow.get_graph().draw_ascii())
+    #save_graph_image(workflow.get_graph().draw_mermaid_png(), "images/researcher_graph.png")
     
     # Run workflow
     response = workflow.invoke(get_initial_state(task, output_foramt, max_iteration))
