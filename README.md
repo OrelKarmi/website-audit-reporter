@@ -34,10 +34,18 @@ if __name__ == "__main__":
 
 ## Graphs
 
+## Graphs
+
+### Main Graph
+
+The main graph provides an overview of the website's performance, highlighting key areas that need attention.
+
 ![Main Graph](images/main_graph.png)
+
+### Researcher Graph
+
+The researcher graph offers a more detailed analysis, focusing on specific elements and their impact.
 
 ![Researcher Graph](images/researcher_graph.png)
 
-## Graph Details
 
-Each node in the main graph corresponds to a detailed view in the researcher graph. This allows for a deeper analysis of specific elements, providing insights into individual components and their impact on the overall website performance.
