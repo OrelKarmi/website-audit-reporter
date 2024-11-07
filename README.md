@@ -24,7 +24,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 # Create a .env file from the example file
-cp .env.example .env
+cp .example.env .env
 
 # Set the URL in the main file and run the analysis
 if __name__ == "__main__":
