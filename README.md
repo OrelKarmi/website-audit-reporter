@@ -51,3 +51,6 @@ The Researcher Graph takes the task assigned by the Main Graph, breaks it down i
 ![Researcher Graph](images/researcher_graph.png)
 
 
+## Report Output
+
+The generated audit reports are stored in the `output_reports` folder. Each report offers detailed insights and actionable recommendations to improve the website's performance and user experience.
